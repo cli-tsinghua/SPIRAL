@@ -1,0 +1,4 @@
+spherex_target_id,cloud,ra_deg,dec_deg,tile_size_arcmin
+lmc_tile_0001,LMC,80.0,-69.0,60.0
+smc_tile_0001,SMC,13.2,-72.8,60.0
+

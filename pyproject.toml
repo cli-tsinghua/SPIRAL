@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spiral-spherex"
+version = "0.1.0"
+description = "SPHEREx Pipeline for Infrared Recombination and Aromatic-Line mapping"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Cheng Li", email = "cli2015@tsinghua.edu.cn"}
+]
+dependencies = [
+  "astropy>=6.0",
+  "numpy>=1.24"
+]
+
+[project.scripts]
+spiral-build-cloud-grid = "spiral.cli:build_cloud_grid_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
