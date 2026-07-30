@@ -10,4 +10,4 @@ volume, but are available from the author upon reasonable request.
 
 Users of SPIRAL should cite this paper and the versioned software release.  The
 software citation metadata will be updated with the paper arXiv identifier and
-release DOI before public release.
+release DOI once they are available.

@@ -74,18 +74,17 @@ The output FITS file contains one image extension per measured quantity.  See
 
 If you use SPIRAL in a publication, presentation, or derived data product, cite
 the paper that describes the pipeline and Magellanic Cloud maps.  The arXiv
-identifier/DOI will be added here once the paper is submitted.  Please also cite
-the versioned SPIRAL software release.
+identifier will be added here once the paper appears online.  Please also cite
+the versioned SPIRAL software release when available.
 
-Repository URL planned for public release:
+Repository URL:
 
 ```text
 https://github.com/cli-tsinghua/SPIRAL
 ```
 
 A draft citation metadata file is provided in `CITATION.cff` and should be
-updated with the paper arXiv identifier and release DOI before the repository is
-made public.
+updated with the paper arXiv identifier and release DOI once they are available.
 
 ## License
 
