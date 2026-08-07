@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import argparse
 
-from .cloud_grid import build_cloud_grid, write_cloud_grid
+from .cloud_grid import SAMPLE_METHODS, build_cloud_grid, write_cloud_grid
 from .features import FEATURE_CONFIGS
 
 
@@ -18,6 +18,19 @@ def build_cloud_grid_main() -> None:
     parser.add_argument("--output-root", default="products")
     parser.add_argument("--pixel-scale-arcsec", type=float, default=120.0)
     parser.add_argument("--flag-policy", choices=("irsa_mosaic", "science_strict", "science_strict_source"), default="science_strict")
+    parser.add_argument(
+        "--sample-method",
+        choices=SAMPLE_METHODS,
+        default="nearest_equal_window",
+        help="Feature-map measurement method. The default reproduces the original SPIRAL window-mean products.",
+    )
+    parser.add_argument(
+        "--template-fwhm-um",
+        type=float,
+        default=None,
+        help="Gaussian FWHM for template-based methods, e.g. nearest_equal_template_window or bilinear_ivar_template.",
+    )
+    parser.add_argument("--ivar-cap-percentile", type=float, default=99.5, help="Per-cutout cap percentile for inverse-variance weights.")
     parser.add_argument("--max-files", type=int, default=None)
     parser.add_argument("--progress-every", type=int, default=1000)
     parser.add_argument("--overwrite", action="store_true")
@@ -31,6 +44,9 @@ def build_cloud_grid_main() -> None:
         cal_root=args.cal_root,
         pixel_scale_arcsec=args.pixel_scale_arcsec,
         flag_policy=args.flag_policy,
+        sample_method=args.sample_method,
+        template_fwhm_um=args.template_fwhm_um,
+        ivar_cap_percentile=args.ivar_cap_percentile,
         max_files=args.max_files,
         progress_every=args.progress_every,
     )
@@ -41,4 +57,3 @@ def build_cloud_grid_main() -> None:
 
 if __name__ == "__main__":
     build_cloud_grid_main()
-

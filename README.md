@@ -24,6 +24,14 @@ sky grid, and measures:
 - window-mean wavelengths,
 - per-window sample counts.
 
+The default map-making mode reproduces the original window-excess products.  For
+finely sampled maps, SPIRAL also provides wavelength-aware feature measurements.
+The `nearest_equal_template_window` option keeps nearest-pixel deposition but
+uses the actual wavelengths of feature-window samples to estimate the integrated
+feature amplitude, reducing scan-pattern sensitivity when the feature is sampled
+non-uniformly.  Bilinear/inverse-variance modes are also included for diagnostic
+tests of spatial sampling and weighting.
+
 The default feature definitions are:
 
 | Feature | Detector | Feature Window | Blue Continuum | Red Continuum |
@@ -65,6 +73,20 @@ python scripts/spiral_build_cloud_grid.py \
   --output-root products \
   --pixel-scale-arcsec 120 \
   --overwrite
+```
+
+For a wavelength-aware nearest-pixel product, add for example:
+
+```bash
+  --sample-method nearest_equal_template_window \
+  --template-fwhm-um 0.110
+```
+
+For a wavelength-aware, inverse-variance weighted diagnostic product, use:
+
+```bash
+  --sample-method bilinear_ivar_template \
+  --template-fwhm-um 0.080
 ```
 
 The output FITS file contains one image extension per measured quantity.  See
