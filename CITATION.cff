@@ -1,22 +1,32 @@
 cff-version: 1.2.0
 title: "SPIRAL: SPHEREx Pipeline for Infrared Recombination and Aromatic-Line Mapping"
-message: "If you use SPIRAL, please cite this software release and the associated paper."
+message: "If you use SPIRAL, please cite both this software release and the associated paper."
 type: software
 authors:
   - family-names: Li
     given-names: Cheng
     orcid: "https://orcid.org/0000-0002-8711-8970"
 repository-code: "https://github.com/cli-tsinghua/SPIRAL"
+repository-artifact: "https://doi.org/10.5281/zenodo.22103715"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22103715"
+    description: "Versioned archive of SPIRAL v0.1.0"
 license: MIT
 version: "0.1.0"
 date-released: "2026-07-30"
 abstract: "Code and documentation for producing SPHEREx 3.3 micron PAH and Brackett-alpha maps from public SPHEREx L2 cutouts."
 preferred-citation:
   type: article
-  title: "SPHEREx 3.3 micron PAH and Brackett-alpha Maps of the Magellanic Clouds"
+  title: "SPHEREx 3.3 Micron Aromatic Emission in the Magellanic Clouds: Separating Dust Column, Excitation, and Environmental Suppression"
   authors:
     - family-names: Li
       given-names: Cheng
       orcid: "https://orcid.org/0000-0002-8711-8970"
   year: 2026
-  notes: "Paper citation placeholder. Replace with the final arXiv identifier, journal reference, and DOI once available."
+  identifiers:
+    - type: other
+      value: "arXiv:2609.20295"
+      description: "arXiv preprint identifier"
+  url: "https://arxiv.org/abs/2609.20295"
+  notes: "Accepted for publication in The Astrophysical Journal."

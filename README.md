@@ -94,10 +94,20 @@ The output FITS file contains one image extension per measured quantity.  See
 
 ## Citation
 
-If you use SPIRAL in a publication, presentation, or derived data product, cite
-the paper that describes the pipeline and Magellanic Cloud maps.  The arXiv
-identifier will be added here once the paper appears online.  Please also cite
-the versioned SPIRAL software release when available.
+SPIRAL was developed for the following paper, which is available on arXiv and
+has been accepted for publication in *The Astrophysical Journal*:
+
+> Li, C. (2026), "SPHEREx 3.3 Micron Aromatic Emission in the Magellanic
+> Clouds: Separating Dust Column, Excitation, and Environmental Suppression,"
+> accepted for publication in *The Astrophysical Journal*,
+> [arXiv:2609.20295](https://arxiv.org/abs/2609.20295).
+
+If you use SPIRAL in a publication, presentation, or derived data product,
+please cite both the paper above and the versioned software release:
+
+> Li, C. (2026), "SPIRAL: SPHEREx Pipeline for Infrared Recombination and
+> Aromatic-Line Mapping," version 0.1.0, Zenodo,
+> [doi:10.5281/zenodo.22103715](https://doi.org/10.5281/zenodo.22103715).
 
 Repository URL:
 
@@ -105,8 +115,8 @@ Repository URL:
 https://github.com/cli-tsinghua/SPIRAL
 ```
 
-A draft citation metadata file is provided in `CITATION.cff` and should be
-updated with the paper arXiv identifier and release DOI once they are available.
+Machine-readable citation metadata are provided in `CITATION.cff`.  The journal
+citation will be updated when ApJ assigns the final bibliographic details.
 
 ## License
 
